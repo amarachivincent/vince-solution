@@ -1,72 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <title>{{title}}</title>
+ <title>Home</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ 	<meta name="keywords" content="website, javascript, responsive, jquery, flask, python, codeigniter" />
+	<meta name="author" content="amarachivincent" />
     <link href="css/bootstrap.min.css" rel='Stylesheet' />
+    <link href="aos/aos.css" rel='Stylesheet' />
+    <link href="aos/imagehover.min.css" rel='Stylesheet' />
+    <link href="css/custom.css" rel="Stylesheet" />
+    <link href="fonts/css/font-awesome.css" rel="Stylesheet"/>
 </head>
 
 <body>
 
   <div class="container">
-     <div class="row">
-         <div class="col-md-12">
-             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                   <div class="navbar-header">
-                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu"
-                         aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-                     <span class="navbar-toggler-icon"></span>
-                 </button>
-                       <a class="navbar-brand" href="/">Vince Solution</a>
+      <div class="section">
+              <div class="row">
+                 <div class="col-md-12">
+                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu"
+                                         aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                                     <span class="navbar-toggler-icon"></span>
+                                 </button>
+                                   <a class="navbar-brand" href="/">Vince Solution</a>
+                            </div>
+
+                                <div class="collapse navbar-collapse" id="menu">
+                                  <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                                      <li><span style="margin-left:30em"></span></li>
+                                     <li class="nav-item"><a class="nav-link active" href="">Home<span class="sr-only">(current)</span></a></li>
+                                     <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                  </ul>
+                                </div>
+                        </div>
+
+                     </nav>
+
+                 </div>
+
+             </div>
+             <a name="top">
+             <div class="row">
+                 <div class="col-md-12">
+                     <div id="logo" class="carousel slide carousel-fade" data-ride="carousel">
+                         <ol class="carousel-indicators">
+                                 <li data-target="#logo" data-slide-to="0" class="active"></li>
+                                 <li data-target="#logo" data-slide-to="1" ></li>
+                          </ol>
+                         <div class="carousel-inner" role="listbox">
+                             <div class="carousel-item active">
+                                 <img class="d-block w-100" src="img/logo.jpg"  alt="First slide"/>
+                             </div>
+                             <div class="carousel-item">
+                                 <img class="d-block w-100" src="img/logo_2.jpg"  alt="Second slide"/>
+                             </div>
+                             <a class="carousel-control-prev" href="#logo" role="button" data-slide="prev">
+                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                 <span class="sr-only">Previous</span>
+                             </a>
+                             <a class="carousel-control-next" href="#logo" role="button" data-slide="next">
+                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                 <span class="sr-only">Next</span>
+                             </a>
+                          </div>
                      </div>
 
-                    <div class="collapse navbar-collapse" id="menu">
-                      <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                          <li><span style="margin-left:30em"></span></li>
-                         <li class="nav-item"><a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a></li>
-                         <li class="nav-item"><a class="nav-link" href="">About Us</a></li>
-                         <li class="nav-item"><a class="nav-link" href="">Services</a></li>
-                         <li class="nav-item"><a class="nav-link" href="">Portfolio</a></li>
-                         <li class="nav-item"><a class="nav-link" href="/blog">Contact</a></li>
-                      </ul>
-                    </div>
-                </div>
+                  </div>
 
-             </nav>
+             </div>
+             </a>
 
-         </div>
+              <a name="about">
+              <h4 class="text-center"  data-aos="fade-up" >About Us</h4>
+                  <div class="about-section">
+                      <div class="row" data-aos="fade-up">
+                          <div class="col-md-6">
+                              <img src="img/l.jpg" class="rounded-circle" />
 
-     </div>
+                              </div>
+                          <div class="col-md-6">
+                              <p>
+                                      <span style="font-size:2em;">H</span>i, I am Ifeduba Amarachi Vincent.<br/> A certified web developer and a self-taught data analyst with a masters degree in Agricultural
+                                      Technology.<br/>
+                                      I have been doing web development and data analyst for about 3 years now.<br/> Some of the projects I have accomplished during these years are
+                                      displayed in the <a href="#portfolio">portfolio</a> section.<br/>
+                                      I am an excellent team player, a fast learner and self motivate. <br/>I look forward to meeting with you. <br/>Thanks and king regards
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+              </a>
 
-      <h3>About Us</h3>
-      <div class="row">
-          <div class="col-md-2">
-              <img src="img/about.png" />
-          </div>
-          <div class="col-md-10">
-              Hi, I am Ifeduba Amarachi Vincent,<br/> a certified web developer and a self-taught data analyst with a masters degree in Agricultural
-              Technology.<br/>
-              I have been doing web development and data analyst for about 3 years now.<br/> Some of the projects I have accomplished during these years are
-              displayed in the portfolio section.<br/>
-              I am an excellent team player, a fast learner, self taught and self motivate. <br/>I look forward to meeting with you. Thanks and king regards
-          </div>
+
+
+              <a name="services">
+              <h4 class="text-center"  data-aos="fade-up" >Services</h4>
+              <div class="row">
+                  <div class="col-md-4"  data-aos="fade-up">
+                      <div class="service-section">
+                      <span class="fa fa-cloud"></span>
+                       <h5>Web Development</h5>
+                            <ul>
+                                <li>Javascript & jQuery</li>
+                                <li>Python & Flask</li>
+                                <li>Php & Codeigniter</li>
+                                <li>Git & Github</li>
+                                <li>SQL</li>
+                            </ul>
+                       </div>
+                  </div>
+
+                  <div class="col-md-4"  data-aos="fade-up" data-aos-delay="500">
+                      <div class="service-section">
+                      <span class="fa fa-diamond"></span>
+                      <h5>Data Analysis</h5>
+                            <ul>
+                                <li>Advance Ms Excel</li>
+                                <li>R</li>
+                                <li>SPSS</li>
+                                <li>Python (Pandas, Matplotlib, Numpy, Scipy, Scikit-learn</li>
+                            </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+
+                  </div>
+
+              </div>
+              </a>
+
+
+              <a name="portfolio">
+              <h4 class="text-center"  data-aos="fade-up" >Portfolio</h4>
+              <div class="row">
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
+                      <div class="portfolio-section">
+                          <h5><a href="">Product Catalogue-Flask</a></h5>
+                          <p>This project was implemented in python flask</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="800">
+                      <div class="portfolio-section">
+                          <h5><a href="">Product Catalogue-Codeigniter</a></h5>
+                          <p>This prject was implement in Php codeigniter</p>
+                      </div>
+                  </div>
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="1000">
+
+                      <div class="portfolio-section">
+                          <h5><a href="">My Portfolio Website</a></h5>
+                          <p class="flex-center">This project was implement in HTML, CSS and Javascript</p>
+                      </div>
+                  </div>
+              </div>
+              </a>
+
+
+             <a name="contact">
+              <h4 class="text-center" data-aos="fade-up"  >Contact</h4>
+              <div class="row" data-aos="fade-up" >
+                  <div class="col-md-7">
+                            <div class="contact-section">
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63461.038272260856!2d7.035626297949537!3d6.222144681995249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104382bd8b94e753%3A0xcf2391eb8abd4753!2sAwka%2C%20Anambra!5e0!3m2!1sen!2sng!4v1697244283191!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+
+                  </div>
+                  <div class="col-md-5">
+                      <div class="contact-section">
+                          <form class="form">
+                              <input type="email" placeholder="email" class="form-control" />
+                              <textarea class="form-control">
+
+                              </textarea><br/>
+                              <p class="">
+                                  <input type="submit" value="Send" name="action" class="btn btn-primary"/>
+                              </p>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+             </a>
+
+              <div class="footer-section">
+                  <div class="row">
+                     <div class="col-md-3">
+                         <ul class="list-inline">
+                             <li class="list-inline-item"><a href=""><span class="fa fa-linkedin"></span></a></li>
+                             <li class="list-inline-item"><a href=""><span class="fa fa-github"></span></a></li>
+                             <li class="list-inline-item"><a href=""><span class="fa fa-envelope"></span></a></li>
+                         </ul>
+
+                         </div>
+                      <div class="col-md-2">
+                          <ul>
+                              <li><a href="">Home</a></li>
+                              <li><a href="#about">About Us</a></li>
+                              <li><a href="#services">Services</a></li>
+                           </ul>
+                       </div>
+                       <div class="col-md-2">
+                           <ul class="list">
+                              <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                              <li class="nav-item"><a href="#contact">Contact</a></li>
+                          </ul>
+
+                          </div>
+                      <div class="col-md-3">
+                          <ul>
+                              <li><a href="">Product catalogue-flask</a></li>
+                              <li><a href="">Product catalogue-codeigniter</a></li>
+                              <li><a href="">My portfolio-website</a></li>
+                          </ul>
+                       </div>
+                      <div class="col-md-2">
+                          <ul>
+                              <li><a href="#top"><span class="fa fa-arrow-up"></span></a></li>
+                          </ul>
+                      </div>
+                      </div>
+              </div>
       </div>
-
-
-
-      <div class="row">
-         <div class="col-md-12">
-
-             <script src="js/jquery.min.js" ></script>
-             <script src="js/bootstrap.min.js"> </script>
-
-
-         </div>
-     </div>
   </div>
-
+      <script src="js/jquery.min.js" ></script>
+      <script src="aos/aos.js"></script>
+      <script src="js/bootstrap.min.js"> </script>
+      <script>
+          AOS.init({   easing: 'ease-out-back',   duration: 1500, delay:200,  once: false,   disable: 'mobile' });
+      </script>
 </body>
 
 </html>

@@ -1,0 +1,62 @@
+
+        .footer-section{
+        background:#222;
+        color:white;
+        }
+        .col-md-4 a{
+        color:gray;
+        }
+
+        h4{
+        background:#222;
+        color:#aaa;
+        padding:.5em 0;
+        }
+
+        .service-section,.portfolio-section{
+         border-radius:.3em;
+         padding:.5em 0;
+
+        }
+
+      ul
+       {
+         list-style-type:none;
+          padding:.5em;
+       }
+       .col-md-4{
+       text-align:center;
+
+       }
+       .service-section .fa-diamond, .service-section .fa-cloud{
+       font-size:3em;
+
+       }
+
+        .section{
+        background:white;
+        border-left:.1em solid gray;
+        border-right:.1em solid gray
+        }
+
+
+        .about-section,.contact-section{
+        padding:.5em;
+        }
+        .footer-section ul a{
+        background:#222;
+        color:#aaa;
+        padding:.2em;
+
+        }
+        body
+        {
+        background:#aaa;
+        font-family:Serif
+
+        }
+        h5{
+        font-weight:bold;
+        color:navy;
+        }
+
