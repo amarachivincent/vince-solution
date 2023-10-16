@@ -13,7 +13,7 @@
         padding:.5em 0;
         }
 
-        .service-section,.portfolio-section{
+        .skill-section,.portfolio-section{
          border-radius:.3em;
          padding:.5em 0;
 
@@ -28,7 +28,7 @@
        text-align:center;
 
        }
-       .service-section .fa-diamond, .service-section .fa-cloud{
+       .skill-section .fa-diamond, .skill-section .fa-cloud{
        font-size:3em;
 
        }
@@ -60,7 +60,7 @@
         color:navy;
         }
 
-        .skill{
+        em{
         color:gray
         }
 
