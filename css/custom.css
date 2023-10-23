@@ -52,7 +52,7 @@
         body
         {
         background:#aaa;
-        font-family:Serif
+        font-family:serif;
 
         }
         h5{
@@ -63,4 +63,14 @@
         em{
         color:gray
         }
-
+        h3,h4,h5{
+        font-family:Impact serif;
+        }
+        .footer-section a:hover{
+        color:#ccc;
+        text-decoration:none;
+        }
+        .portfolio-section a:hover{
+        color:blue;
+        text-decoration:none;
+        }
