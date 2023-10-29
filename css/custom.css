@@ -2,6 +2,7 @@
         .footer-section{
         background:#222;
         color:white;
+        padding:0.5em;
         }
         .col-md-4 a{
         color:gray;
@@ -36,7 +37,8 @@
         .section{
         background:white;
         border-left:.1em solid gray;
-        border-right:.1em solid gray
+        border-right:.1em solid gray;
+
         }
 
 
@@ -46,13 +48,14 @@
         .footer-section ul a{
         background:#222;
         color:#aaa;
-        padding:.2em;
+        padding:.5em;
 
         }
         body
         {
         background:#aaa;
-        font-family:serif;
+        font-family:Calibri,Times;
+        font-size:1.1em;
 
         }
         h5{
@@ -64,7 +67,7 @@
         color:gray
         }
         h3,h4,h5{
-        font-family:Impact serif;
+        font-family:Couriel,Arial;
         }
         .footer-section a:hover{
         color:#ccc;
@@ -74,3 +77,10 @@
         color:blue;
         text-decoration:none;
         }
+        div.about-section{
+         padding:1.5em;
+
+        }
+
+
+

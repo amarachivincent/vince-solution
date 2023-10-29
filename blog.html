@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+ 	<meta name="keywords" content="website, javascript, responsive, jquery, flask, python, codeigniter, web development, data analysis" />
+	<meta name="author" content="amarachivincent" />
+    <link href="css/bootstrap.min.css" rel='Stylesheet' />
+    <link href="aos/aos.css" rel='Stylesheet' />
+    <link href="aos/imagehover.min.css" rel='Stylesheet' />
+    <link href="css/custom.css" rel="Stylesheet" />
+    <link href="fonts/css/font-awesome.css" rel="Stylesheet"/>
+
+</head>
+
+
+<body>
+
+  <div class="container">
+      <div class="section">
+              <div class="row">
+                 <div class="col-md-12">
+                     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu"
+                                         aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                                     <span class="navbar-toggler-icon"></span>
+                                 </button>
+                                   <a class="navbar-brand" href="">Vince Solution</a>
+                            </div>
+
+                                <div class="collapse navbar-collapse" id="menu">
+                                  <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                                      <li><span style="margin-left:20em"></span></li>
+                                     <li class="nav-item"><a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a></li>
+                                     <li class="nav-item"><a class="nav-link" href="index.html#about">About Me</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                                      <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                                  </ul>
+                                </div>
+                        </div>
+
+                     </nav>
+
+                 </div>
+
+             </div>
+             <a name="top">
+
+             </a>
+
+              <a name="about">
+              <h4 class="text-center"  data-aos="fade-up"  style="background:white;color:black">QA - Quiz App Using  The Trivia API</h4>
+                  <div class="about-section">
+                      <div class="row" data-aos="fade-up">
+                          <div class="col-md-12">
+
+                              <div>
+
+                              <ul >
+                                  <li><a href="blog.html#intro">Introduction</a></li>
+                                  <li><a href="blog.html#whybuild">Why build a quiz app</a></li>
+                                  <li><a href="blog.html#design">Designing the App Interface</a></li>
+                                  <li><a href="blog.html#api">Making API Calls</a></li>
+                                  <li><a href="blog.html#finalizing">Finalizing</a></li>
+                              </ul>
+                              </div>
+                              <a name="intro"></a>
+                              <h5>Introduction</h5>
+                              <p>
+                                     Today, I will be taking us through building of a very simple quiz app using front end web development languages
+                                  - HTML, CSS, Javascript and JQuery<br/>
+
+
+                              </p>
+                                  <a name="whybuild"></a>
+
+                                  <h5>Why build a quiz app?</h5>
+                              <p>
+                                  The reason for choosing a quiz app from the plethora of real world apps that could possibly be built using thesame skill sets is because it
+                                  lends itself well to the logic of API calls which I want to demonstrate in this tutorial. <br/>
+                                  What the app does is simple. It displays random questions and multiple options to the user. The questions and answers all coming from an API call
+                                  to a public quiz database
+                             </p>
+                             <p>
+                                  <a name="design"></a>
+
+                                  <h5>Designing the App Interface</h5>
+                                  The app interface is divided into 3 sections<br/>
+                                  <ol>
+                                  <li>the title section</li>
+                                  <li>the question section and</li>
+                                  <li>the options section.</li>
+                                  </ol>
+                                  The title section displays the app title, the question section displays current question and the options section displays four radio
+                                  buttons with different options.
+                                  the user is expected to select the option that correctly answer to the question from the list of the options and then click the next<br/>
+                                  button below the radio buttons to move to the next question. The code for the interface is shown below.
+
+                                  <br/><br/>
+                              </p>
+
+
+
+<div class="about-section" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;">
+
+<pre>
+1 &lt;!DOCTYPE html&gt;
+2 &lt;html lang="en"&gt;
+3 &lt;head&gt;
+4 &lt;title&gt;QA&lt;/title&gt;
+5 &lt;meta charset = "UTF-8" />
+6 &lt;meta name="keywords" content="quiz,game,api" /&gt;
+7 &lt;script src="js/jquery.min.js"&gt;&lt;/script&gt;
+8 &lt;script src="js/bootstrap.min.js"&gt;&lt;/script&gt;
+9 &lt;link href="css/bootstrap.min.css" rel="stylesheet" /&gt;
+10 &lt;link href="css/custom.css" rel="stylesheet" /&gt;
+11 &lt;/head&gt;
+12 &lt;body&gt;
+13 &lt;div class="container"&gt;
+14     &lt;div class="row"&gt;
+15        &lt;div class="col-md-12"&gt;
+16            &lt;h1>QA - Quize App Using  The Trivia API&lt;/h1&gt;
+17        &lt;/div&gt;
+18     &lt;/div&gt;
+19         &lt;div class="row"&gt;
+21          &lt;div class="col-md-10"&gt;
+22            &lt;form id='form'&gt;
+23                &lt;label>&lt;/label&gt;
+24                &lt;label id='options'&gt;&lt;/label&gt;
+26            &lt;/form&gt;
+27           &lt;/div>
+28           &lt;div class="col-md-2"&gt;
+30             &lt;span id="score">&lt;/span&gt;
+32           &lt;/div&gt;
+33      &lt;/div&gt;
+34 &lt;/div&gt;
+35 &lt;/body&gt;
+36 &lt;/html&gt;
+ 	</pre>
+
+ 	</div>
+
+<br/>
+<p>
+
+  The above code is the basic structure of HTML web page and nothing too strange<br/>
+  1-2. The html document declaration<br/>
+  7-8. Links to jquery and bootstrap libraries.<br/>
+  13-14. div elements given class of container and rows as required by bootstrap library for proper rendering<br/>
+  15. Bootstrap class telling the browser to allow the content of this div to take the whole screen.<br/>
+  16. The name of the app declared using h1 tag.<br/>
+  21&28. Bootstrap class telling the browser to divide the screen into two column on medium screen size devices at a ratio of 10:2 since the maximum screen
+  width in bootstrap is 12. Notice the span with id attribute value of 'score' in the second column. This will be used to programmatically display
+  the score to the user.<br/>
+  22-26. Form declared with two label elements. The first is for proper rendering of the form and the second serves as a placeholder. Notice that the second label has been given an id attribute value of 'options'. This is where the options for the question
+  will be displayed in a radio button using javascript. Javascript will also be use to display the question and appended to the form element<br/>
+
+  32-36. Closing tags for the cotainers divs, body and html elements.
+
+</p>
+<p>
+
+The output of the above code is shown below
+</p>
+<br/>
+
+                                <blockquote>
+                                  <img class="d-block w-100" src="img/blog/interface_head.png" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;" />
+                                </blockquote>
+<p>
+    Nothing fancy yet apart from the name of the application.<br/>
+ <a name='api'></a>
+<h5>Making API Calls</h5>
+    Lets start programming other part of the interface now.<br/>
+    Before the closing body tag of the interface code add a script tag and declare several javascript variables as shown below:
+
+</p>
+
+<div class="about-section" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;">
+
+
+<pre>
+
+1 &lt;script&gt;
+2 let APP={};
+3 APP.score=0;
+4 $(document).ready(function(){
+5  doAjax('https://the-trivia-api.com/v2/questions');
+    });
+6 &lt;/script&gt;
+7 &lt;/body&gt;
+8 &lt;/html&gt;
+
+</pre>
+
+</div>
+
+<p>
+<br/><br/>
+In the above script, observe the following: <br/>
+1. Opening script tag. This tells the browser that we want to start writing script. In this case, javascript which is the default scripting language for most browsers.<br/>
+2. Declare a global APP object that will be use to hold other application variables. This is to prevent namespace collision. For more information on this read
+<a href="https://books.google.com.ng/books?id=PXa2bby0oQ0C&printsec=copyright&redir_esc=y#v=onepage&q&f=false" target="_blank">Javascript: The Good Part by Douglas Crockford</a><br/>
+3. Add a score variable to the APP object and initialize its value to 0.<br/>
+4. Use jquery to check if the document is fully loaded (ready). Then call doAjax function with a url as the argument. This url is the api that will fetch the questions and answers from
+the public database <br/>
+6-8. Close the script, body and html element tags.<br/>
+
+At this point, trying to run the app will cause an error because the doAjax function has not been defined. <br/>Next, let us define the doAjax function. Below the last jquery code add the following lines<br/>
+</p>
+
+<div class="about-section" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;">
+<pre>
+ $(document).ready(function(){
+   doAjax('https://the-trivia-api.com/v2/questions');
+    });
+
+ 1  doAjax=function(url){
+ 2   $.ajax({
+ 3   url:url,
+ 4  type:'GET',
+ 5   success:function(result){
+ 6   console.log(result);
+ 7   },
+ 8   error:function(error){
+ 9   console.log(error);
+ 10   },
+ 11   });
+ 12  }
+ 13 &lt;/script&gt;
+</pre>
+</div>
+<p>
+<br/><br/>
+
+In the above script, line(s)<br/>
+
+1. Defines doAjax function which takes one parameter, a url. Lines 2-11 is the basic structure of making ajax call in jquery.<br/>
+2. Calls the jquery ajax function, passing to it  anonymous javascript object {}.<br/>
+3. The anonymous object passed to the ajax function has url variable  that holds the url.<br/>
+4. The type variable of the object indicate the type of ajax call. In this case since we want to retrieve information from the database through the api, we use GET.<br/>
+5. The success variable of the object is a method that contains the result of the ajax call if it is successful. This result is by default in JSON format. Although, you can choose to use other formats.<br/>
+6. Log the result return from the database in the console. At least, for now.<br/>
+8. The error variable of the object is also a method that returns error message if the call is not successful. For now just log the error to the console.<br/>
+10-12. Close all open curly brackets.<br/>
+
+<br/>
+At this point, the script will successfully run. However, the display on the interface witll remain thesame. This is because we have not written script to add anything to it. To see the returned result,
+open the log of the console in your browser developer tools.You will see in the log a JSON format object.
+</p>
+
+<p>
+Let us go ahead now and make the result to display on the interface. <br/>First, we need to use javascript to create the various elements that will be use to hold
+the result. We will need a textarea element to hold the questions, four input element of type radio to hold the options and a button to go to the next question.<br/>
+Delete <i>console.log(result)</i> inside the success method and  add the following lines.<br/>
+</p>
+<div class="about-section" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;">
+<pre>
+
+type:'GET',
+success:function(result){
+
+1 let query_options={'_one':result[0].correctAnswer,'_two':result[0].incorrectAnswers[0],'_three':result[0].incorrectAnswers[1],'_four':result[0].incorrectAnswers[2]};
+
+2 key=Object.keys(query_options);
+
+3 tarea=document.createElement('textarea');
+4 fctr=document.createAttribute('class');
+5 rows=document.createAttribute('rows');
+6 cols=document.createAttribute('cols');
+7 fctr.value="form-control";
+8 cols.value="100px";
+9 rows.value="5px";
+10 tarea.id="question";
+11 tarea.setAttributeNode(fctr);
+12 tarea.setAttributeNode(rows);
+13 tarea.setAttributeNode(cols);
+14
+15 form=document.getElementById('form');
+16
+17 form.insertBefore(tarea,document.getElementById('options'));
+18 form.appendChild(document.createElement('br'));
+19 form.appendChild(document.createElement('br'));
+20 question=document.querySelector('#question');
+21 question.value=result[0].question.text;
+22 question.disabled=true;
+23 question.style.backgroundColor="#fff";
+
+24 div=document.createElement('div');
+25 div.id='option';
+26 document.getElementById('options').appendChild(div);
+27
+28 for(i=0;i&lt;;key.length;i++){
+29
+
+30 input=document.createElement('input');
+31 label=document.createElement('label');
+32 input.type='radio';
+33 label.innerText=query_options[key[i]];
+34 input.value=query_options[key[i]];
+35
+
+35 att=document.createAttribute('class');
+36 nam=document.createAttribute('name');
+37 nam.value='_one';
+38 att.value='radio_option';
+39
+40
+41
+42
+43 label.setAttributeNode(att);
+44 input.setAttributeNode(nam);
+45 option=document.getElementById('options');
+46 option.appendChild(input);
+47 option.appendChild(label);
+48 option.appendChild(document.createElement('br'));
+49 option.appendChild(document.createElement('br'));
+50
+51 }
+52
+53 submit=document.createElement('submit');
+54 submitatt=document.createAttribute('class');
+55 submitatt.value="btn btn-primary";
+56 submit.setAttributeNode(submitatt);
+57 submit.appendChild(document.createTextNode('Next >>'));
+58 span=document.createElement('span');
+59 span.id='span';
+60 span.appendChild(document.createTextNode("Score: "+APP.score));
+61 score=document.getElementById('score')
+62 score.appendChild(span);
+63 option.appendChild(submit);
+64
+65
+66    },
+
+
+</pre>
+</div>
+
+<p>
+<br/>
+The volume of the above code makes it rather intimidating and overwhelming. However nothing strange is happening except for some DOM manipulation using javascript.<br/>
+1. query_options object was declared to hold the options returned by the api call. Notice that the options have both the correct and incorrect answers.<br/>
+2. Get the keys of the query_options object using the javascript object method Object.keys()<br/>
+3-13. Textarea element is created using javascript createElement() method of document object, id, class, rows and cols attributes are created using createAttribute() method of the
+document object. These attributes are given values of question,form-control, 100px and 5px and finally added to the textarea using settAttributeNode() method of document object.<br/>
+15. The form element is retrieved from the document using the id attribute.<br/>
+17. The textarea is then inserted between the two label element declared inside the form element using insertBefore() method of document object. This method takes
+two parameters.<br/>
+18-19. Two break element is created and added to the form element for nice spacing.<br/>
+20. The textarea is retrieved from the document using the id attribute and the querySelector() method of the document object<br/>
+21.The question text is retrieved from the result object return by the api call and given as the value of the textarea.<br/>
+22. The textarea is disabled so that users cannot type into it.<br/>
+23. The textarea background is changed to white to hide its resize handle.<br/>
+24-26. Create a div element, give it an id attribute of option and add to the label placeholder element marked with id value of option.<br/>
+28. Loop through the question options. This loop will run four times since there are 4 options for each question.<br/>
+30-31. For each loop, create an input and label element.<br/>
+32. Declare the input type to be radio.<br/>
+33-34. Set the inner text of  the label to the question option and give the radio input a value equal to the question option.<br/>
+35-38. Create a class and name attribute for the label and input element respectively. Give them values of radio_option and _one for the purpose of styling.<br/>
+43-44. Add these attribute to the label and input element. <br/>
+45-49. Add the input and label element to the label marked options. Add two break element too.<br/>
+51. Closes the loop.<br/>
+53-56. Create a submit button and a class attribute. Give the class a value of btn btn-primary for styling and add it to the submit button.<br/>
+57. Create a next textnode and make it the text of the submit button.
+58-60. Create a span element to hold the score. Give it an id attribute of span. Then create a text value of score and add to the span element.<br/>
+61-62. Get the label with id score and add the span to this label.<br/>
+63. Add the submit button to the div marked with id of option.<br/>
+66. Close the result method.
+
+</p>
+
+<p>
+ Running this code at this point produces the following result.
+ <blockquote>
+  <img class="d-block w-100" src="img/blog/interface.png" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;"  />
+ </blockquote>
+</p>
+
+<p>
+ The app is almost complete except that clicking the next button does nothing. This is because we have not added event listener to the button. Let's  do this<br/>
+    <a name="finalizing"></a>
+
+    <h5>Finalizing</h5><br>
+    Add the following lines of code mmediately after the line <br/>
+    <i>submit=document.createElement('submit')</i> <br/>
+
+<div class="about-section" style="background:#eef;border-top:2px solid black;border-bottom:2px solid black;">
+ <pre>
+
+submit=document.createElement('submit');
+
+1 submit.addEventListener('click',function(){
+2 form.removeChild(tarea);
+3 score.removeChild(document.getElementById('span'));
+4 document.getElementById('options').removeChild(option);
+5 if(APP.choice.toUpperCase()==result[0].correctAnswer.toUpperCase())
+6 {
+7
+8 APP.score+=1;
+9 }
+10 doAjax('https://the-trivia-api.com/v2/questions');
+11 });
+ </pre>
+
+ </div>
+</p>
+
+<p>
+<br/>
+The following is going on in the above code.<br/>
+1.	Add click event listener to the submit button.<br/>
+2-3. Remove the tarea, span and option elements each time the next button is clicked since new ones will be created with each new question.<br/>
+5-8. Increase the score by 1 if the user selected the correct option.<br/>
+10. Call the doAjax function to repeat the ajax call.
+</p>
+
+<br/><br/>
+<p>
+That is it. Clicking the next button will cause the app to generate new set of question and options. You can go ahead and try it. <br/>
+The app however is not yet perfect. Can you think of what is missing?<br/>
+The live app can be found <a href="https://amarachivincent.github.io/quiz-app/">here</a> and the source code can be found in <a href="https://github.com/amarachivincent/quiz-app">Github</a>.<br/>
+I hope you enjoy this tutorial. See you some other time. Bye for now</br>
+<a href="index.html#contact">Your Comment</a>
+</p>
+
+
+
+
+
+
+
+
+                          </div>
+                      </div>
+                  </div>
+              </a>
+
+
+
+
+
+
+              <div class="footer-section">
+                  <div class="row">
+                     <div class="col-md-3">
+                         <ul class="list-inline">
+                             <li class="list-inline-item"><a href="https://www.linkedin.com/in/ifeduba-amarachi-82247921a" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+                             <li class="list-inline-item"><a href=""><span class="fa fa-github"></span></a></li>
+                             <li class="list-inline-item"><a href="mailto:amarachivi@gmail.com"><span class="fa fa-envelope"></span></a></li>
+
+                         </ul>
+
+
+                         </div>
+                      <div class="col-md-2">
+                          <ul>
+                              <li><a href="index.html">Home</a></li>
+                              <li><a href="index.html#about">About Me</a></li>
+                              <li><a href="index.html#skills">Skills</a></li>
+                           </ul>
+                       </div>
+                       <div class="col-md-2">
+                           <ul class="list">
+                              <li class="nav-item"><a href="index.html#portfolio">Portfolio</a></li>
+                              <li class="nav-item"><a href="index.html#contact">Contact</a></li>
+                              <li class="nav-item"><a href="blog.html">Blog</a></li>
+
+                          </ul>
+
+                          </div>
+                      <div class="col-md-3">
+                          <ul>
+                              <li><a href="http://amarachiportfolio.pythonanywhere.com/" target="_blank">Inventory - Flask</a></li>
+                              <li><a href="index.html">Vince Solution Website</a></li>
+                             <li><a href="https://amarachivincent.github.io/quiz-app/">Quiz App - Trivia API</a></li>
+                          </ul>
+                       </div>
+                      <div class="col-md-2">
+                          <ul>
+                              <li><a href="#top"><span class="fa fa-arrow-up"></span></a></li>
+                          </ul>
+                      </div>
+                      </div>
+              </div>
+      </div>
+  </div>
+      <script src="js/jquery.min.js" ></script>
+      <script src="aos/aos.js"></script>
+      <script src="js/bootstrap.min.js"> </script>
+      <script>
+          AOS.init({   easing: 'ease-out-back',   duration: 1500, delay:200,  once: false,   disable: 'mobile' });
+      </script>
+</body>
+
+</html>
