@@ -54,7 +54,7 @@
         body
         {
         background:#aaa;
-        font-family:Calibri,Times;
+        font-family:'Avnir light',Futura,Georgia,Bodoni;
         font-size:1.1em;
 
         }
@@ -67,7 +67,7 @@
         color:gray
         }
         h3,h4,h5{
-        font-family:Couriel,Arial;
+        font-family:'Amatic SC','Playfair Display',Couriel,Arial;
         }
         .footer-section a:hover{
         color:#ccc;
