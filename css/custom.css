@@ -3,6 +3,7 @@
         background:#222;
         color:white;
         padding:0.5em;
+        font-size:0.9em;
         }
         .col-md-4 a{
         color:gray;
@@ -73,6 +74,7 @@
         color:#ccc;
         text-decoration:none;
         }
+
         .portfolio-section a:hover{
         color:blue;
         text-decoration:none;
@@ -80,6 +82,11 @@
         div.about-section{
          padding:1.5em;
 
+        }
+        
+        body{
+        
+        line-height:1.8em;
         }
 
 
