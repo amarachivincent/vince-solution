@@ -32,7 +32,7 @@
 
                                 <div class="collapse navbar-collapse" id="menu">
                                   <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                                      <li><span style="margin-left:20em"></span></li>
+                                      <li><span style="margin-left:18em"></span></li>
                                      <li class="nav-item"><a class="nav-link active" href="">Home<span class="sr-only">(current)</span></a></li>
                                      <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                                      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
@@ -198,8 +198,8 @@
                       <div class="contact-section">
                           <form class="form" method='post' action='http://localhost/portfolio/index.php'>
                           <label for='info' id='info' style='color:red'></label>
-                              <input type="email" placeholder="email" class="form-control" id='email' name='email'/>
-                              <textarea class="form-control" name='tarea' id='tarea'>
+                              <input type="email" placeholder="Email" class="form-control" id='email' name='email'/>
+                              <textarea class="form-control" name='tarea' id='tarea' placeholder='Message'>
                               </textarea><br/>
                               <p class="">
                                   <input type="submit" value="Send" name="action" class="btn btn-primary"/>
@@ -268,7 +268,8 @@
 
            if(validate())
            {
-             doAjax('https://files.000webhost.com/portfolio.php');
+            // doAjax('https://files.000webhost.com/portfolio.php');
+            doAjax('http://localhost/portfolio/index.php');
 
            }
 
@@ -280,7 +281,8 @@
           type:'POST',
           data:$('form').serialize(),
           success:function(response){
-          $('#info').html(response);
+          $('#info').html('Successfully sent message');
+
           $('#tarea').val('');
           $('#email').val('');
 
@@ -290,7 +292,6 @@
 
 
           });
-
 
           }
 
