@@ -196,10 +196,10 @@
                   </div>
                   <div class="col-md-5">
                       <div class="contact-section">
-                          <form class="form" action="mailto:amarachivi@gmail.com">
-                              <input type="email" placeholder="email" class="form-control" />
-                              <textarea class="form-control">
-
+                          <form class="form" method='post' action='http://localhost/portfolio/index.php'>
+                          <label for='info' id='info' style='color:red'></label>
+                              <input type="email" placeholder="email" class="form-control" id='email' name='email'/>
+                              <textarea class="form-control" name='tarea' id='tarea'>
                               </textarea><br/>
                               <p class="">
                                   <input type="submit" value="Send" name="action" class="btn btn-primary"/>
@@ -260,6 +260,65 @@
       <script src="js/bootstrap.min.js"> </script>
       <script>
           AOS.init({   easing: 'ease-out-back',   duration: 1500, delay:200,  once: false,   disable: 'mobile' });
+
+          submit=document.querySelector('input[name="action"]');
+
+          submit.addEventListener('click',function(event){
+           event.preventDefault();
+
+           if(validate())
+           {
+             doAjax('https://files.000webhost.com/portfolio.php');
+
+           }
+
+          })
+
+          doAjax=(url)=>{
+          $.ajax({
+          url:url,
+          type:'POST',
+          data:$('form').serialize(),
+          success:function(response){
+          $('#info').html(response);
+          $('#tarea').val('');
+          $('#email').val('');
+
+
+          },
+          error:function(error){console.log(error)}
+
+
+          });
+
+
+          }
+
+         validate=()=>{
+         message=true;
+         if($('#email').val().length==0){
+         $('#info').html('Email is required');
+         message=false;
+
+         }else if($('#tarea').val().length==0){
+         $('#info').html('Message is required');
+         message=false
+
+         }else{
+
+
+         return true;
+
+         }
+
+
+
+
+
+
+         }
+
+
       </script>
 </body>
 
