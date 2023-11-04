@@ -268,8 +268,8 @@
 
            if(validate())
            {
-            // doAjax('https://files.000webhost.com/portfolio.php');
-            doAjax('http://localhost/portfolio/index.php');
+             doAjax('https://damask-telecommunic.000webhostapp.com/portfolio.php');
+            //doAjax('http://localhost/portfolio/index.php');
 
            }
 
@@ -281,8 +281,7 @@
           type:'POST',
           data:$('form').serialize(),
           success:function(response){
-          $('#info').html('Successfully sent message');
-
+          $('#info').html(response);
           $('#tarea').val('');
           $('#email').val('');
 
