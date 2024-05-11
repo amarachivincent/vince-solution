@@ -30,11 +30,13 @@
        text-align:center;
 
        }
-       .skill-section .fa-diamond, .skill-section .fa-cloud, .skill-section .fa-mobile{
+       .skill-section .fa-diamond, .skill-section .fa-cloud, .skill-section{
        font-size:3em;
 
        }
-
+       .skill-secton fa-mobile-phone{
+        font-size:3em;
+       }
         .section{
         background:white;
         border-left:.1em solid gray;
